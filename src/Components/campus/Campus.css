@@ -1,0 +1,59 @@
+.campus {
+     margin: 40px ;
+    padding: 20px;
+    background-color: #f7f7f7;
+
+    
+  }
+  
+  .gallery {
+    
+    display: flex;
+    justify-content: center;
+  }
+  
+  .gallery img {
+    
+    width: 25%;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .gallery img:hover {
+    
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .btn {
+    
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 40%;
+    
+    
+
+  }
+  
+  .dark-btn {
+    /* styles for the dark button */
+    background-color: #444;
+  }
+  
+  .dark-btn:hover {
+    /* styles for the dark button on hover */
+    background-color: #555;
+  }
+  
+  .dark-btn img {
+    /* styles for the white arrow image */
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    vertical-align: middle;
+  }
