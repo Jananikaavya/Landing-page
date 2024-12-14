@@ -1,87 +1,32 @@
-/* General Navigation Styles */
-nav {
-    width: 100%;
-    color: #fff;
-    padding: 4px;
+/* Mobile menu */
+.show-mobile-menu {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background: #212EA0;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    padding-top: 70px;
     z-index: 10;
-    background: transparent; /* Consider adding a default background if needed */
-    transition: background 0.5s;
+    transition: right 0.3s ease-in-out;
 }
 
-.logo {
-    width: 180px;
-}
-
-nav ul {
+.hide-mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: #212EA0;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 5px 20px;
-    font-size: 16px;
-}
-
-.dark-nav {
-    background: #3626ae;
-    transition: background 0.5s;
-}
-
-.menu-icon {
-    display: none;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
-
-/* Responsive Styles */
-
-/* For screens smaller than 1000px */
-@media (max-width: 1000px) {
-    .logo {
-        width: 140px;
-    }
-    nav ul li {
-        margin: 10px 15px;
-    }
-}
-
-/* For screens smaller than 840px */
-@media (max-width: 840px) {
-    nav {
-        padding: 15px 0;
-    }
-    nav ul {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        background: #212EA0;
-        z-index: 9;
-        width: 200px;
-        padding-top: 70px;
-        flex-direction: column;
-        align-items: flex-start;
-        transition: right 0.5s;
-    }
-    nav ul li {
-        display: block;
-        margin: 25px 40px;
-    }
-    .menu-icon {
-        display: block;
-    }
-    .hide-mobile-menu {
-        right: -200px;
-    }
+    justify-content: flex-start;
+    padding-top: 70px;
+    z-index: 10;
+    transition: right 0.3s ease-in-out;
 }

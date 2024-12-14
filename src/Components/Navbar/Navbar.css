@@ -1,8 +1,8 @@
 /* General Navigation Styles */
-nav {
+.navbar {
     width: 100%;
     color: #fff;
-    padding: 4px;
+    padding: 10px 20px;
     position: fixed;
     top: 0;
     left: 0;
@@ -10,31 +10,54 @@ nav {
     align-items: center;
     justify-content: space-between;
     z-index: 10;
-    background: transparent; /* Consider adding a default background if needed */
-    transition: background 0.5s;
+    background: transparent;
+    transition: background 0.5s ease;
+}
+
+.sticky-nav {
+    background: #212EA0;
+    transition: background 0.5s ease;
 }
 
 .logo {
-    width: 180px;
+    width: 150px;
+    transition: width 0.3s ease;
 }
 
-nav ul {
+.nav-links {
     display: flex;
     align-items: center;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline-block;
     list-style: none;
-    margin: 5px 20px;
-    font-size: 16px;
+    padding: 0;
+    margin: 0;
 }
 
-.dark-nav {
-    background: #3626ae;
-    transition: background 0.5s;
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f0c040;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: #f0c040;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #d39e36;
 }
 
 .menu-icon {
@@ -42,46 +65,48 @@ nav ul li {
     width: 30px;
     height: 30px;
     cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.menu-icon:hover {
+    transform: scale(1.1);
 }
 
 /* Responsive Styles */
 
-/* For screens smaller than 1000px */
-@media (max-width: 1000px) {
-    .logo {
-        width: 140px;
-    }
-    nav ul li {
-        margin: 10px 15px;
-    }
-}
-
 /* For screens smaller than 840px */
 @media (max-width: 840px) {
-    nav {
-        padding: 15px 0;
-    }
-    nav ul {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        background: #212EA0;
-        z-index: 9;
-        width: 200px;
-        padding-top: 70px;
-        flex-direction: column;
-        align-items: flex-start;
-        transition: right 0.5s;
-    }
-    nav ul li {
-        display: block;
-        margin: 25px 40px;
-    }
     .menu-icon {
         display: block;
     }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -50%; /* Start off-screen */
+        width: 50%; /* Occupy half the screen */
+        height: 100vh;
+        background: #212EA0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9;
+        transition: right 0.3s ease-in-out;
+    }
+
+    .show-mobile-menu {
+        right: 0; /* Slide into view */
+    }
+
     .hide-mobile-menu {
-        right: -200px;
+        right: -50%; /* Slide out of view */
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links a {
+        font-size: 18px;
     }
 }
